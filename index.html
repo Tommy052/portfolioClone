@@ -27,6 +27,7 @@
   <!-- Javascript -->
   <script type="module" src="src/main.js" defer></script>
   <script type="module" src="src/projects.js" defer></script>
+  <script type="module" src="src/active_menu.js" defer></script>
 </head>
 
 <body>
@@ -38,12 +39,12 @@
     </div>
     <nav class="header__nav">
       <ul class="header__menu">
-        <li><a class="header__menu__item active" href="#home">Home</a></li>
-        <li><a class="header__menu__item" href="#about">About</a></li>
-        <li><a class="header__menu__item" href="#skills">Skills</a></li>
-        <li><a class="header__menu__item" href="#work">My work</a></li>
-        <li><a class="header__menu__item" href="#testimonial">Testimonial</a></li>
-        <li><a class="header__menu__item" href="#contact">Contact</a></li>
+        <li><a class="header__menu__item active" href="#home" data-link="home">Home</a></li>
+        <li><a class="header__menu__item" href="#about" data-link="about">About</a></li>
+        <li><a class="header__menu__item" href="#skills" data-link="skills">Skills</a></li>
+        <li><a class="header__menu__item" href="#work" data-link="work">My work</a></li>
+        <li><a class="header__menu__item" href="#testimonial" data-link="testimonial">Testimonial</a></li>
+        <li><a class="header__menu__item" href="#contact" data-link="contact">Contact</a></li>
       </ul>
     </nav>
     <button class="header__toggle" aria-label="navigation menu toggle">
@@ -186,85 +187,125 @@
         <p class="description">Projects</p>
         <ul class="categories">
           <li>
-            <button class="category category--selected">All <span class="category__count">8</span></button>
+            <button class="category category--selected" data-category="all">
+              All <span class="category__count">8</span>
+            </button>
           </li>
           <li>
-            <button class="category">Front-end <span class="category__count">3</span></button>
+            <button class="category" data-category="front-end">
+              Front-end <span class="category__count">4</span>
+            </button>
           </li>
           <li>
-            <button class="category">Back-end <span class="category__count">3</span></button>
+            <button class="category" data-category="back-end">
+              Back-end <span class="category__count">2</span>
+            </button>
           </li>
           <li>
-            <button class="category">Mobile <span class="category__count">2</span></button>
+            <button class="category" data-category="mobile">
+              Mobile <span class="category__count">2</span>
+            </button>
           </li>
         </ul>
         <ul class="projects">
-          <li class="project">
+          <li class="project" data-type="front-end">
             <a href="#" target="_blank">
-              <img src="images/projects/project1.webp" alt="project1" class="project__img" />
+              <img
+                src="images/projects/project1.webp"
+                alt="project1"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #1</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="front-end">
             <a href="#" target="_blank">
-              <img src="images/projects/project2.webp" alt="project2" class="project__img" />
+              <img
+                src="images/projects/project2.webp"
+                alt="project2"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #2</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="back-end">
             <a href="#" target="_blank">
-              <img src="images/projects/project3.webp" alt="project3" class="project__img" />
+              <img
+                src="images/projects/project3.webp"
+                alt="project3"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #3</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="mobile">
             <a href="#" target="_blank">
-              <img src="images/projects/project4.webp" alt="project4" class="project__img" />
+              <img
+                src="images/projects/project4.webp"
+                alt="project4"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #4</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="front-end">
             <a href="#" target="_blank">
-              <img src="images/projects/project5.webp" alt="project5" class="project__img" />
+              <img
+                src="images/projects/project5.webp"
+                alt="project5"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #5</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="back-end">
             <a href="#" target="_blank">
-              <img src="images/projects/project6.webp" alt="project6" class="project__img" />
+              <img
+                src="images/projects/project6.webp"
+                alt="project6"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #6</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="mobile">
             <a href="#" target="_blank">
-              <img src="images/projects/project7.webp" alt="project7" class="project__img" />
+              <img
+                src="images/projects/project7.webp"
+                alt="project7"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #7</h3>
                 <p>Clone Coding with HTML, CSS</p>
               </div>
             </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="front-end">
             <a href="#" target="_blank">
-              <img src="images/projects/project8.webp" alt="project8" class="project__img" />
+              <img
+                src="images/projects/project8.webp"
+                alt="project8"
+                class="project__img"
+              />
               <div class="project__metadata">
                 <h3 class="project__title">Project #8</h3>
                 <p>Clone Coding with HTML, CSS</p>
